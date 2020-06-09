@@ -1,3 +1,14 @@
+/**
+ * <h1>Multiples of 3 and 5</h1>
+ * Project Euler problem 1
+ * Simply displays <Sum> to the standard output.
+ * <p>
+ *
+ *
+ * @author  Sai Krishna Gottipalli
+ * @since   09-06-2020
+ */
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
@@ -6,6 +17,7 @@ public class projectEuler {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int num = Integer.parseInt(br.readLine());
         System.out.println(multiplesSum(num));
+        br.close();
     }
 
     public static long multiplesSum(int num)
