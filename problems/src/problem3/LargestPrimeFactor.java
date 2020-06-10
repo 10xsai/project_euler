@@ -14,17 +14,31 @@ public class LargestPrimeFactor {
 
 
     public static class Solution {
-
-        public static boolean isPrime(long number) {
-            int sqrt = (int)Math.sqrt(number);
-            while (sqrt > 1) {
-                if (number % sqrt == 0)
+        // Trial division method
+        public static boolean isPrime(long n)
+        {
+            if (n == 1)
+                return false;
+            if (n == 2 || n == 3 || n == 5)
+                return true;
+            if (n % 2 == 0 || n % 3 == 0 || n % 5 == 0)
+                return false;
+            if (n < 9)
+                return true;
+            int sqrt = (int)(Math.sqrt(n));
+            int curr = 5;
+            while (curr <= sqrt)
+            {
+                if (n % curr == 0)
                     return false;
-                sqrt--;
+                if (n % (curr + 2) == 0)
+                    return false;
+                curr += 6;
             }
             return true;
         }
 
+        // Decrementing from backwards
         public static int LargestPrimeFactor(long number) {
             int sqrt = (int)Math.sqrt(number);
             while (sqrt > 1) {
