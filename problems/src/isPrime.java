@@ -3,7 +3,7 @@ public class isPrime {
         long number = Long.parseLong("459651");
         System.out.println(validatePrime(number));
     }
-
+    // Trial division method
     public static boolean validatePrime(long n)
     {
         if (n == 1)
