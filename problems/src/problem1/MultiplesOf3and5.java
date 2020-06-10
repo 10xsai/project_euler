@@ -1,8 +1,4 @@
 
-/**
- * @author  Sai Krishna Gottipalli
- * @since   09-06-2020
- */
 
 package problem1;
 
